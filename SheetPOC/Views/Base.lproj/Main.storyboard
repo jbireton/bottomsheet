@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d9D-Ll-Cz6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="svw-LR-Z1D">
+            <objects>
+                <viewController id="d9D-Ll-Cz6" customClass="MapViewController" customModule="SheetPOC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7qF-zw-S1M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dTL-jz-bWR">
+                                <rect key="frame" x="0.0" y="169" width="414" height="727"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9B-o1-8er">
+                                <rect key="frame" x="0.0" y="44" width="414" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gd5-Hh-uya">
+                                        <rect key="frame" x="184" y="47.5" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapDrawerButton:" destination="d9D-Ll-Cz6" eventType="touchUpInside" id="G7U-dR-q0N"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Gd5-Hh-uya" firstAttribute="centerX" secondItem="x9B-o1-8er" secondAttribute="centerX" id="6QD-aq-Icx"/>
+                                    <constraint firstItem="Gd5-Hh-uya" firstAttribute="centerY" secondItem="x9B-o1-8er" secondAttribute="centerY" id="9YQ-og-GJq"/>
+                                    <constraint firstAttribute="height" constant="125" id="HQf-ar-Rcf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="QWT-Dc-pTV" firstAttribute="trailing" secondItem="x9B-o1-8er" secondAttribute="trailing" id="2fl-c8-nCr"/>
+                            <constraint firstItem="x9B-o1-8er" firstAttribute="leading" secondItem="QWT-Dc-pTV" secondAttribute="leading" id="5t7-Ze-zGz"/>
+                            <constraint firstItem="dTL-jz-bWR" firstAttribute="top" secondItem="x9B-o1-8er" secondAttribute="bottom" id="AhI-r1-L3H"/>
+                            <constraint firstItem="dTL-jz-bWR" firstAttribute="leading" secondItem="7qF-zw-S1M" secondAttribute="leading" id="Hx6-js-V4u"/>
+                            <constraint firstAttribute="trailing" secondItem="dTL-jz-bWR" secondAttribute="trailing" id="Iao-Mm-uHE"/>
+                            <constraint firstItem="x9B-o1-8er" firstAttribute="top" secondItem="QWT-Dc-pTV" secondAttribute="top" id="aDa-AZ-PdH"/>
+                            <constraint firstAttribute="bottom" secondItem="dTL-jz-bWR" secondAttribute="bottom" id="nPj-wV-m5q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QWT-Dc-pTV"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomSheetButton" destination="Gd5-Hh-uya" id="CNE-07-TVi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4g-eM-Pss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289.85507246376812" y="-331.47321428571428"/>
+        </scene>
+    </scenes>
+</document>
